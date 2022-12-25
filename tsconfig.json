@@ -1,26 +1,32 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "src"
-  ]
+    "compilerOptions": {
+        "target": "es2020",
+        "lib": ["dom", "dom.iterable", "ES2020"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "module": "ES2020",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "esModuleInterop": true,
+        "baseUrl": ".",
+        "paths": {
+            "~pages/*": ["./src/pages/*"],
+            "~components/*": ["./src/components/*"],
+            "~layouts/*": ["./src/layouts/*"],
+            "~middlewares/*": ["./src/middlewares/*"],
+            "~redux/*": ["./src/redux/*"],
+            "~contracts/*": ["./src/contracts/*"],
+            "~images/*": ["./src/images/*"]
+        }
+    },
+    "files": ["./globals.d.ts"],
+    "include": ["**/*.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
 }
